@@ -1,0 +1,21 @@
+<%-  include('partials/header'); -%>
+<div>
+  <h1>Home</h1>
+  <hr>
+  <p><%= hst %></p>
+  <div class="homePostTitle">
+    <% if(pst.length>0){ %>
+      <h2>Posts</h2>
+  <%  } %>
+  </div>
+  <div class="homePostList">
+    <% pst.forEach(function(post){ %>
+    <h1><%= post.title%></h1>
+    <hr>
+    <p><%= post.content.substring(0,100) + "...  " %><a href="/posts/<%= post.title %>">Read More</a></p>
+    <% }); %>
+  </div>
+</div>
+
+
+<%-  include('partials/footer'); -%>

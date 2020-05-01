@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+
+<div class="postPage">
+  <h1><%=title%></h1>
+  <hr>
+  <div class="contentArea">
+      <p><%=content%></p>
+  </div>
+
+  <div class="remove">
+    <form action="/remove" method="post">
+        <button class="btn btn-danger" type="submit" name="delete" value="<%=title%>">Remove</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+<%- include("partials/footer"); -%>
